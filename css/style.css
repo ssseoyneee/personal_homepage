@@ -164,7 +164,7 @@ a:hover {
   margin: 0 0 24px;
 
   font-size: 38px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.05;
 
   color: var(--text-color);
@@ -373,7 +373,7 @@ a:hover {
     width: 190px;
 
     /* 사진과 아이콘 간격 */
-    margin-top: 12px;
+    margin-top: 16px;
 
     /* 아이콘끼리 간격 */
     gap: 20px;
@@ -394,7 +394,7 @@ a:hover {
     margin-bottom: 22px;
 
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 400;
 
     text-align: center;
   }
@@ -471,7 +471,7 @@ a:hover {
     width: 175px;
 
     /* 사진과 아이콘 간격 */
-    margin-top: 8px;
+    margin-top: 12px;
 
     gap: 18px;
   }
