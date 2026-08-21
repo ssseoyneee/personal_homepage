@@ -15,6 +15,12 @@
     rel="stylesheet"
   >
 
+  <!-- Bootstrap Icons -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+>
+  
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,109 +29,111 @@
 
   <main class="container">
 
-    <!-- =========================
-         ABOUT
-    ========================== -->
-    <section class="about">
+<!-- =========================
+     ABOUT
+========================== -->
+<section class="about">
 
-      <!-- Profile -->
-      <div class="profile-image-wrapper">
+  <!-- Left: Profile + Links -->
+  <div class="profile-column">
 
-        <img
-          src="assets/profile.png"
-          alt="Seoyeon Kim"
-          class="profile-image"
-          style="border-radius: 30px;"
-        >
+    <img
+      src="assets/profile.png"
+      alt="Seoyeon Kim"
+      class="profile-image"
+    >
 
-        <!-- Links below profile image -->
-        <div class="links" style="text-align: center; margin-top: 14px;">
+    <div class="profile-links">
 
-          <a
-            href="https://scholar.google.com/citations?hl=ko&user=_PCaHpEAAAAJ"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Scholar
-          </a>
+      <a
+        href="https://scholar.google.com/citations?hl=ko&user=_PCaHpEAAAAJ"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Google Scholar"
+        title="Google Scholar"
+      >
+        <i class="bi bi-mortarboard-fill"></i>
+      </a>
 
-          <span>|</span>
+      <a
+        href="https://github.com/ssseoyneee"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        title="GitHub"
+      >
+        <i class="bi bi-github"></i>
+      </a>
 
-          <a
-            href="https://github.com/ssseoyneee"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
+      <a
+        href="https://www.linkedin.com/in/seoyeon-kim-04april"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        title="LinkedIn"
+      >
+        <i class="bi bi-linkedin"></i>
+      </a>
 
-          <span>|</span>
+      <a
+        href="assets/files/cv.pdf"
+        target="_blank"
+        aria-label="CV"
+        title="CV"
+      >
+        <i class="bi bi-file-earmark-text-fill"></i>
+      </a>
 
-          <a
-            href="https://www.linkedin.com/in/seoyeon-kim-04april"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
+      <a
+        href="mailto:yeon_04@yonsei.ac.kr"
+        aria-label="Email"
+        title="Email"
+      >
+        <i class="bi bi-envelope-fill"></i>
+      </a>
 
-          <br>
+    </div>
 
-          <a
-            href="assets/files/cv.pdf"
-            target="_blank"
-          >
-            CV
-          </a>
-
-          <span>|</span>
-
-          <a href="mailto:yeon_04@yonsei.ac.kr">
-            Email
-          </a>
-
-        </div>
-
-      </div>
+  </div>
 
 
-      <!-- About Content -->
-      <div class="about-content">
+  <!-- Right: Bio -->
+  <div class="about-content">
 
-        <h1>Seoyeon Kim</h1>
+    <h1>Seoyeon Kim</h1>
 
-        <div class="bio">
+    <div class="bio">
 
-          <p>
-            I am currently pursuing an M.S. in Artificial Intelligence at
-            Yonsei University, where I am advised by
-            <a
-              href="https://sites.google.com/view/jaehyungkim"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Prof. Jaehyung Kim</a>
-            at the
-            <a
-              href="https://ml3.yonsei.ac.kr"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Machine and Language Learning Lab (ML3)</a>.
-            I received my B.S. in Applied Statistics from Yonsei University.
-          </p>
+      <p>
+        I am currently pursuing an M.S. in Artificial Intelligence at
+        Yonsei University, where I am advised by
+        <a
+          href="https://sites.google.com/view/jaehyungkim"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Prof. Jaehyung Kim</a>
+        at the
+        <a
+          href="https://ml3.yonsei.ac.kr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Machine and Language Learning Lab (ML3)</a>.
+        I received my B.S. in Applied Statistics from Yonsei University.
+      </p>
 
-          <p>
-            My research aims to develop user-centered AI systems that understand
-            users and their contexts, ultimately bridging advances in AI research
-            with meaningful improvements in real-world user experiences.
-            My research interests include LLM alignment, personalization,
-            and reliable instruction following.
-          </p>
+      <p>
+        My research aims to develop user-centered AI systems that understand
+        users and their contexts, ultimately bridging advances in AI research
+        with meaningful improvements in real-world user experiences.
+        My research interests include LLM alignment, personalization,
+        and reliable instruction following.
+      </p>
 
-        </div>
+    </div>
 
-      </div>
+  </div>
 
-    </section>
+</section>
 
 
     <!-- =========================
