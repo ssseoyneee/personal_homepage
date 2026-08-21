@@ -55,7 +55,7 @@
 
       font-family: "Lato", sans-serif;
       font-size: 17px;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 1.45;
 
       color: var(--text-color);
@@ -93,20 +93,21 @@
       grid-template-columns: 245px minmax(0, 1fr);
 
       gap: 55px;
-      align-items: stretch;
+      align-items: start;
 
       margin-bottom: 65px;
     }
 
 
-    /* Left Column */
+    /* =========================
+       PROFILE COLUMN
+    ========================== */
 
     .profile-column {
       display: flex;
       flex-direction: column;
 
       width: 245px;
-      height: 100%;
     }
 
     .profile-image {
@@ -122,7 +123,7 @@
     }
 
 
-    /* Icons */
+    /* Profile Icons */
 
     .profile-links {
       display: flex;
@@ -133,8 +134,7 @@
 
       width: 245px;
 
-      margin-top: auto;
-      padding-top: 18px;
+      margin-top: 10px;
     }
 
     .profile-links a {
@@ -159,7 +159,9 @@
     }
 
 
-    /* Right Column */
+    /* =========================
+       ABOUT CONTENT
+    ========================== */
 
     .about-content {
       min-width: 0;
@@ -176,7 +178,7 @@
     }
 
     .bio p {
-      margin: 0 0 20px;
+      margin: 0 0 19px;
     }
 
     .bio p:last-child {
@@ -200,7 +202,7 @@
       margin: 0;
 
       font-size: 25px;
-      font-weight: 400;
+      font-weight: 500;
     }
 
     .section-line {
@@ -261,13 +263,11 @@
 
     .authors {
       margin-bottom: 1px;
-
       color: #444444;
     }
 
     .venue {
       margin-bottom: 3px;
-
       color: #444444;
     }
 
@@ -289,7 +289,6 @@
 
       .container {
         max-width: 100%;
-
         padding: 42px 22px 65px;
       }
 
@@ -310,8 +309,6 @@
 
       .profile-column {
         width: 100%;
-        height: auto;
-
         align-items: center;
 
         margin-bottom: 32px;
@@ -330,8 +327,7 @@
       .profile-links {
         width: 220px;
 
-        margin-top: 0;
-        padding-top: 16px;
+        margin-top: 10px;
 
         gap: 20px;
       }
@@ -529,8 +525,8 @@
         <div class="bio">
 
           <p>
-            I am currently pursuing an M.S. in Artificial Intelligence at
-            Yonsei University, where I work with
+            I am currently an M.S. student in Artificial Intelligence at
+            Yonsei University, advised by
             <a
               href="https://sites.google.com/view/jaehyungkim"
               target="_blank"
@@ -542,7 +538,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >Machine and Language Learning Lab (ML3)</a>.
-            I received my B.S. in Applied Statistics from Yonsei University.
+            I previously received my B.S. in Applied Statistics from Yonsei University.
           </p>
 
           <p>
@@ -552,7 +548,7 @@
           </p>
 
           <p class="contact">
-            I'm always happy to chat about research or related ideas.
+            Always happy to chat!
             Feel free to reach out at
             <a href="mailto:yeon_04@yonsei.ac.kr">yeon_04@yonsei.ac.kr</a>.
           </p>
