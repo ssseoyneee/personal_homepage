@@ -16,6 +16,7 @@
   <!-- Google Font: Lato -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
     rel="stylesheet"
@@ -27,421 +28,12 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
   >
 
-  <style>
+  <!-- External CSS -->
+  <link
+    rel="stylesheet"
+    href="css/style.css?v=4"
+  >
 
-    /* =========================
-       COLORS
-    ========================== */
-
-    :root {
-      --main-color: #5165D0;
-      --sub-color: #9DA9EA;
-      --light-color: #EEF0FF;
-
-      --text-color: #222222;
-      --subtext-color: #666666;
-    }
-
-
-    /* =========================
-       GLOBAL
-    ========================== */
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: #ffffff;
-
-      font-family: "Lato", sans-serif;
-      font-size: 17px;
-      font-weight: 500;
-      line-height: 1.45;
-
-      color: var(--text-color);
-    }
-
-    a {
-      color: var(--main-color);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-
-    /* =========================
-       CONTAINER
-    ========================== */
-
-    .container {
-      width: 100%;
-      max-width: 900px;
-
-      margin: 0 auto;
-      padding: 70px 28px 100px;
-    }
-
-
-    /* =========================
-       ABOUT
-    ========================== */
-
-    .about {
-      display: grid;
-      grid-template-columns: 245px minmax(0, 1fr);
-
-      gap: 55px;
-      align-items: start;
-
-      margin-bottom: 65px;
-    }
-
-
-    /* =========================
-       PROFILE COLUMN
-    ========================== */
-
-    .profile-column {
-      display: flex;
-      flex-direction: column;
-
-      width: 245px;
-    }
-
-    .profile-image {
-      display: block;
-
-      width: 245px;
-      height: 245px;
-
-      object-fit: cover;
-      object-position: center;
-
-      border-radius: 30px;
-    }
-
-
-    /* Profile Icons */
-
-    .profile-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      gap: 19px;
-
-      width: 245px;
-
-      margin-top: 18px;
-    }
-
-    .profile-links a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      font-size: 27px;
-      line-height: 1;
-
-      color: var(--main-color);
-
-      transition:
-        transform 0.15s ease,
-        color 0.15s ease;
-    }
-
-    .profile-links a:hover {
-      color: #3F50B5;
-      text-decoration: none;
-      transform: translateY(-2px);
-    }
-
-
-    /* =========================
-       ABOUT CONTENT
-    ========================== */
-
-    .about-content {
-      min-width: 0;
-    }
-
-    .about-content h1 {
-      margin: 0 0 24px;
-
-      font-size: 38px;
-      font-weight: 400;
-      line-height: 1.05;
-
-      color: var(--text-color);
-    }
-
-    .bio p {
-      margin: 0 0 19px;
-    }
-
-    .bio p:last-child {
-      margin-bottom: 0;
-    }
-
-    .contact {
-      color: var(--subtext-color);
-    }
-
-
-    /* =========================
-       SECTIONS
-    ========================== */
-
-    .section {
-      margin-top: 50px;
-    }
-
-    .section h2 {
-      margin: 0;
-
-      font-size: 25px;
-      font-weight: 500;
-    }
-
-    .section-line {
-      width: 100%;
-      height: 1px;
-
-      margin: 9px 0 18px;
-
-      background: var(--sub-color);
-    }
-
-
-    /* =========================
-       NEWS
-    ========================== */
-
-    .news-list {
-      display: flex;
-      flex-direction: column;
-
-      gap: 8px;
-    }
-
-    .news-item {
-      display: grid;
-      grid-template-columns: 105px 1fr;
-
-      align-items: baseline;
-    }
-
-    .news-date {
-      color: var(--main-color);
-
-      font-size: 15px;
-      font-weight: 700;
-    }
-
-
-    /* =========================
-       PUBLICATIONS
-    ========================== */
-
-    .publication {
-      margin-bottom: 26px;
-    }
-
-    .publication:last-child {
-      margin-bottom: 0;
-    }
-
-    .paper-title {
-      margin-bottom: 2px;
-
-      font-size: 17px;
-      font-weight: 700;
-      line-height: 1.4;
-    }
-
-    .authors {
-      margin-bottom: 1px;
-      color: #444444;
-    }
-
-    .venue {
-      margin-bottom: 3px;
-      color: #444444;
-    }
-
-    .paper-links {
-      font-size: 16px;
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================== */
-
-    @media (max-width: 700px) {
-
-      body {
-        font-size: 16px;
-        line-height: 1.5;
-      }
-
-      .container {
-        max-width: 100%;
-        padding: 42px 22px 65px;
-      }
-
-
-      /* About */
-
-      .about {
-        display: flex;
-        flex-direction: column;
-
-        gap: 0;
-
-        margin-bottom: 50px;
-      }
-
-
-      /* Profile */
-
-      .profile-column {
-        width: 100%;
-        align-items: center;
-
-        margin-bottom: 32px;
-      }
-
-      .profile-image {
-        width: 220px;
-        height: 220px;
-
-        border-radius: 30px;
-      }
-
-
-      /* Icons */
-
-      .profile-links {
-        width: 220px;
-
-        margin-top: 10px;
-
-        gap: 20px;
-      }
-
-      .profile-links a {
-        font-size: 25px;
-      }
-
-
-      /* Bio */
-
-      .about-content {
-        width: 100%;
-      }
-
-      .about-content h1 {
-        margin: 0 0 22px;
-
-        font-size: 34px;
-        font-weight: 700;
-        line-height: 1.1;
-
-        text-align: center;
-      }
-
-      .bio {
-        width: 100%;
-      }
-
-      .bio p {
-        margin-bottom: 18px;
-      }
-
-
-      /* Sections */
-
-      .section {
-        margin-top: 42px;
-      }
-
-      .section h2 {
-        font-size: 23px;
-      }
-
-
-      /* News */
-
-      .news-item {
-        display: block;
-      }
-
-      .news-date {
-        display: block;
-
-        margin-bottom: 3px;
-
-        font-size: 14px;
-      }
-
-
-      /* Publications */
-
-      .publication {
-        margin-bottom: 25px;
-      }
-
-      .paper-title {
-        font-size: 16px;
-      }
-
-      .paper-links {
-        font-size: 15px;
-      }
-    }
-
-
-    /* =========================
-       SMALL MOBILE
-    ========================== */
-
-    @media (max-width: 420px) {
-
-      .container {
-        padding-left: 18px;
-        padding-right: 18px;
-      }
-
-      .profile-image {
-        width: 205px;
-        height: 205px;
-      }
-
-      .profile-links {
-        width: 205px;
-
-        gap: 18px;
-      }
-
-      .profile-links a {
-        font-size: 24px;
-      }
-
-      .about-content h1 {
-        font-size: 32px;
-      }
-    }
-
-  </style>
 </head>
 
 
@@ -477,6 +69,7 @@
             <i class="bi bi-mortarboard-fill"></i>
           </a>
 
+
           <!-- GitHub -->
           <a
             href="https://github.com/ssseoyneee"
@@ -487,6 +80,7 @@
           >
             <i class="bi bi-github"></i>
           </a>
+
 
           <!-- LinkedIn -->
           <a
@@ -499,15 +93,18 @@
             <i class="bi bi-linkedin"></i>
           </a>
 
+
           <!-- CV -->
           <a
             href="assets/files/cv.pdf"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="CV"
             title="CV"
           >
             <i class="bi bi-file-earmark-text-fill"></i>
           </a>
+
 
           <!-- Email -->
           <a
@@ -544,13 +141,14 @@
               target="_blank"
               rel="noopener noreferrer"
             >Machine and Language Learning Lab (ML3)</a>.
-            I previously received my B.S. in Applied Statistics from Yonsei University.
+            I previously received my B.S. in Applied Statistics from
+            Yonsei University.
           </p>
 
           <p>
-            My research focuses on building user-centered AI systems that better
-            understand user context and preferences, with particular interests in
-            LLM alignment and personalization.
+            My research focuses on building user-centered AI systems that
+            better understand user context and preferences, with particular
+            interests in LLM alignment and personalization.
           </p>
 
           <p class="contact">
@@ -626,6 +224,7 @@
         </div>
 
         <div class="paper-links">
+
           <a
             href="https://arxiv.org/abs/2607.23991"
             target="_blank"
@@ -633,6 +232,7 @@
           >
             paper
           </a>
+
         </div>
 
       </article>
@@ -655,6 +255,7 @@
         </div>
 
         <div class="paper-links">
+
           <a
             href="https://arxiv.org/abs/2601.09974"
             target="_blank"
@@ -662,6 +263,7 @@
           >
             paper
           </a>
+
         </div>
 
       </article>
