@@ -73,7 +73,6 @@ a:hover {
   grid-template-columns: 280px minmax(0, 1fr);
   gap: 55px;
 
-  /* 사진 상단과 이름 상단 정렬 */
   align-items: start;
 
   margin-bottom: 65px;
@@ -88,7 +87,7 @@ a:hover {
   display: flex;
   flex-direction: column;
 
-  width: 100%;
+  width: 280px;
 }
 
 
@@ -120,10 +119,9 @@ a:hover {
 
   width: 280px;
 
-  /* 아이콘끼리의 간격 */
   gap: 24px;
 
-  /* 사진과 아이콘 사이 간격 */
+  /* Always keep 18px between image and icons */
   margin-top: 18px;
 }
 
@@ -164,7 +162,7 @@ a:hover {
   margin: 0 0 24px;
 
   font-size: 38px;
-  font-weight: 400;
+  font-weight: 400 !important;
   line-height: 1.05;
 
   color: var(--text-color);
@@ -229,7 +227,6 @@ a:hover {
 
 .news-item {
   display: grid;
-
   grid-template-columns: 105px minmax(0, 1fr);
 
   align-items: baseline;
@@ -351,7 +348,9 @@ a:hover {
   }
 
 
-  /* Profile */
+  /* =========================
+     PROFILE
+  ========================= */
 
   .profile-column {
     width: 190px;
@@ -367,15 +366,16 @@ a:hover {
   }
 
 
-  /* Profile Links */
+  /* =========================
+     PROFILE LINKS
+  ========================= */
 
   .profile-links {
     width: 190px;
 
-    /* 사진과 아이콘 간격 */
-    margin-top: 16px;
+    /* Keep exactly 18px on mobile too */
+    margin-top: 18px;
 
-    /* 아이콘끼리 간격 */
     gap: 20px;
   }
 
@@ -384,17 +384,20 @@ a:hover {
   }
 
 
-  /* About Content */
+  /* =========================
+     ABOUT CONTENT
+  ========================= */
 
   .about-content {
     width: 100%;
   }
 
   .about-content h1 {
-    margin-bottom: 22px;
+    margin: 0 0 22px;
 
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 400 !important;
+    line-height: 1.1;
 
     text-align: center;
   }
@@ -414,6 +417,7 @@ a:hover {
 
   .section h2 {
     font-size: 23px;
+    font-weight: 400;
   }
 
 
@@ -456,7 +460,9 @@ a:hover {
   }
 
 
-  /* Profile */
+  /* =========================
+     PROFILE
+  ========================= */
 
   .profile-column {
     width: 175px;
@@ -465,13 +471,20 @@ a:hover {
   .profile-image {
     width: 175px;
     height: 175px;
+
+    border-radius: 30px;
   }
+
+
+  /* =========================
+     PROFILE LINKS
+  ========================= */
 
   .profile-links {
     width: 175px;
 
-    /* 사진과 아이콘 간격 */
-    margin-top: 12px;
+    /* Still exactly 18px */
+    margin-top: 18px;
 
     gap: 18px;
   }
@@ -481,14 +494,19 @@ a:hover {
   }
 
 
-  /* Name */
+  /* =========================
+     NAME
+  ========================= */
 
   .about-content h1 {
     font-size: 30px;
+    font-weight: 400 !important;
   }
 
 
-  /* News */
+  /* =========================
+     NEWS
+  ========================= */
 
   .news-item {
     display: block;
