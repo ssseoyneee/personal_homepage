@@ -1,5 +1,5 @@
 /* =========================
-   COLOR VARIABLES
+   COLORS
 ========================= */
 
 :root {
@@ -27,7 +27,8 @@ html {
 
 body {
   margin: 0;
-  background-color: #ffffff;
+
+  background: #ffffff;
 
   font-family: "Lato", sans-serif;
   font-size: 17px;
@@ -51,7 +52,7 @@ a:hover {
 
 
 /* =========================
-   MAIN CONTAINER
+   CONTAINER
 ========================= */
 
 .container {
@@ -64,14 +65,16 @@ a:hover {
 
 
 /* =========================
-   ABOUT
+   ABOUT — DESKTOP
 ========================= */
 
 .about {
   display: grid;
+
   grid-template-columns: 240px minmax(0, 1fr);
 
-  gap: 55px;
+  column-gap: 55px;
+
   align-items: start;
 
   margin-bottom: 65px;
@@ -79,7 +82,7 @@ a:hover {
 
 
 /* =========================
-   PROFILE COLUMN
+   PROFILE
 ========================= */
 
 .profile-column {
@@ -88,11 +91,6 @@ a:hover {
 
   width: 240px;
 }
-
-
-/* =========================
-   PROFILE IMAGE
-========================= */
 
 .profile-image {
   display: block;
@@ -108,7 +106,7 @@ a:hover {
 
 
 /* =========================
-   PROFILE LINKS
+   PROFILE ICONS
 ========================= */
 
 .profile-links {
@@ -118,23 +116,21 @@ a:hover {
 
   width: 240px;
 
-  /* 아이콘끼리 간격 */
   gap: 18px;
 
-  /* 사진과 아이콘 사이 간격 */
+  /* photo ↔ icons */
   margin-top: 18px;
 }
 
 .profile-links a {
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  color: var(--main-color);
+  align-items: center;
 
   font-size: 25px;
   line-height: 1;
 
+  color: var(--main-color);
   text-decoration: none;
 
   transition:
@@ -182,7 +178,7 @@ a:hover {
 
 
 /* =========================
-   GENERAL SECTION
+   SECTIONS
 ========================= */
 
 .section {
@@ -199,18 +195,13 @@ a:hover {
   color: var(--text-color);
 }
 
-
-/* =========================
-   DIVIDER
-========================= */
-
 .section-line {
   width: 100%;
   height: 1px;
 
   margin: 9px 0 20px;
 
-  background-color: var(--sub-color);
+  background: var(--sub-color);
 }
 
 
@@ -227,6 +218,7 @@ a:hover {
 
 .news-item {
   display: grid;
+
   grid-template-columns: 105px minmax(0, 1fr);
 
   align-items: baseline;
@@ -241,17 +233,15 @@ a:hover {
 
 
 /* =========================
-   PUBLICATIONS
+   PUBLICATIONS — DESKTOP
 ========================= */
 
 .publication {
   display: grid;
 
-  /* figure 영역 */
-  grid-template-columns: 260px minmax(0, 1fr);
+  grid-template-columns: 270px minmax(0, 1fr);
 
-  /* figure와 텍스트 사이 간격 */
-  column-gap: 14px;
+  column-gap: 16px;
 
   align-items: center;
 
@@ -263,18 +253,10 @@ a:hover {
 }
 
 
-/* =========================
-   PAPER FIGURE
-========================= */
+/* Figure */
 
 .paper-figure {
-  width: 260px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
+  width: 270px;
 }
 
 .paper-figure a {
@@ -289,19 +271,10 @@ a:hover {
   height: auto;
 
   object-fit: contain;
-
-  /* 이미지 자체에 흰 여백이 있는 경우
-     figure를 살짝 확대해서 덜 작아 보이게 */
-  transform: scale(1.08);
-  transform-origin: center;
-
-  border-radius: 6px;
 }
 
 
-/* =========================
-   PAPER INFO
-========================= */
+/* Paper Info */
 
 .paper-info {
   min-width: 0;
@@ -339,49 +312,29 @@ a:hover {
 ========================= */
 
 ::selection {
-  background-color: var(--light-color);
+  background: var(--light-color);
   color: var(--text-color);
 }
 
 
 /* =========================
-   TABLET / MOBILE
+   MOBILE
 ========================= */
 
 @media (max-width: 700px) {
 
-  .publication {
-    display: block;
-
-    margin-bottom: 40px;
-  }
-
-  .paper-figure {
-    width: 100%;
-    max-width: 500px;
-
-    margin: 0 auto 16px;
-
-    overflow: hidden;
-  }
-
-  .paper-figure img {
-    width: 100%;
-
-    transform: scale(1.04);
-  }
-
-  .paper-title {
+  body {
     font-size: 16px;
+    line-height: 1.5;
   }
 
-  .paper-links {
-    font-size: 15px;
+  .container {
+    padding: 45px 22px 70px;
   }
-}
+
 
   /* =========================
-     ABOUT
+     ABOUT — MOBILE ONLY
   ========================= */
 
   .about {
@@ -396,9 +349,7 @@ a:hover {
   }
 
 
-  /* =========================
-     PROFILE
-  ========================= */
+  /* Profile centered */
 
   .profile-column {
     width: 200px;
@@ -411,16 +362,11 @@ a:hover {
     height: 200px;
   }
 
-
-  /* =========================
-     PROFILE LINKS
-  ========================= */
-
   .profile-links {
     width: 200px;
 
-    margin-top: 18px;
     gap: 18px;
+    margin-top: 18px;
   }
 
   .profile-links a {
@@ -428,9 +374,7 @@ a:hover {
   }
 
 
-  /* =========================
-     ABOUT CONTENT
-  ========================= */
+  /* Name + bio below profile */
 
   .about-content {
     width: 100%;
@@ -451,9 +395,7 @@ a:hover {
   }
 
 
-  /* =========================
-     SECTIONS
-  ========================= */
+  /* Sections */
 
   .section {
     margin-top: 42px;
@@ -461,13 +403,10 @@ a:hover {
 
   .section h2 {
     font-size: 23px;
-    font-weight: 400;
   }
 
 
-  /* =========================
-     NEWS
-  ========================= */
+  /* News */
 
   .news-item {
     grid-template-columns: 90px minmax(0, 1fr);
@@ -478,9 +417,7 @@ a:hover {
   }
 
 
-  /* =========================
-     PUBLICATIONS
-  ========================= */
+  /* Publications stack only on mobile */
 
   .publication {
     display: block;
@@ -492,7 +429,12 @@ a:hover {
     width: 100%;
     max-width: 520px;
 
-    margin: 0 auto 18px;
+    margin: 0 auto 16px;
+  }
+
+  .paper-figure img {
+    width: 100%;
+    height: auto;
   }
 
   .paper-title {
@@ -516,11 +458,6 @@ a:hover {
     padding-right: 18px;
   }
 
-
-  /* =========================
-     PROFILE
-  ========================= */
-
   .profile-column {
     width: 180px;
   }
@@ -533,28 +470,18 @@ a:hover {
   .profile-links {
     width: 180px;
 
-    margin-top: 18px;
     gap: 18px;
+    margin-top: 18px;
   }
 
   .profile-links a {
     font-size: 22px;
   }
 
-
-  /* =========================
-     NAME
-  ========================= */
-
   .about-content h1 {
     font-size: 30px;
     font-weight: 400;
   }
-
-
-  /* =========================
-     NEWS
-  ========================= */
 
   .news-item {
     display: block;
@@ -564,18 +491,5 @@ a:hover {
     display: block;
 
     margin-bottom: 2px;
-  }
-
-
-  /* =========================
-     PUBLICATIONS
-  ========================= */
-
-  .publication {
-    margin-bottom: 38px;
-  }
-
-  .paper-figure {
-    margin-bottom: 16px;
   }
 }
