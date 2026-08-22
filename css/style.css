@@ -246,7 +246,7 @@ a:hover {
 
 .publication {
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
+  grid-template-columns: 280px minmax(0, 1fr);
 
   gap: 28px;
   align-items: start;
