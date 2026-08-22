@@ -71,9 +71,9 @@ a:hover {
 .about {
   display: grid;
 
-  grid-template-columns: 240px minmax(0, 1fr);
+  grid-template-columns: 260px minmax(0, 1fr);
 
-  column-gap: 55px;
+  column-gap: 50px;
 
   align-items: start;
 
@@ -89,14 +89,14 @@ a:hover {
   display: flex;
   flex-direction: column;
 
-  width: 240px;
+  width: 260px;
 }
 
 .profile-image {
   display: block;
 
-  width: 240px;
-  height: 240px;
+  width: 260px;
+  height: 260px;
 
   object-fit: cover;
   object-position: center;
@@ -241,7 +241,7 @@ a:hover {
 
   grid-template-columns: 270px minmax(0, 1fr);
 
-  column-gap: 16px;
+  column-gap: 18px;
 
   align-items: center;
 
