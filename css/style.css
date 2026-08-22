@@ -248,10 +248,10 @@ a:hover {
   display: grid;
 
   /* figure 영역 */
-  grid-template-columns: 260px minmax(0, 1fr);
+  grid-template-columns: 280px minmax(0, 1fr);
 
   /* figure와 텍스트 사이 간격 */
-  column-gap: 14px;
+  column-gap: 10px;
 
   align-items: center;
 
