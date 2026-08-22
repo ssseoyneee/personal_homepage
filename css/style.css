@@ -235,7 +235,6 @@ a:hover {
   color: var(--main-color);
 }
 
-
 /* =========================
    PUBLICATIONS
 ========================= */
@@ -243,16 +242,12 @@ a:hover {
 .publication {
   display: grid;
 
-  /* figure를 더 크게 */
-  grid-template-columns: 320px minmax(0, 1fr);
+  grid-template-columns: 280px minmax(0, 1fr);
+  column-gap: 12px;
 
-  /* figure와 text는 가깝게 */
-  column-gap: 14px;
-
-  /* figure와 오른쪽 정보 블록 세로 중앙 정렬 */
   align-items: center;
 
-  margin-bottom: 38px;
+  margin-bottom: 34px;
 }
 
 .publication:last-child {
@@ -265,12 +260,11 @@ a:hover {
 ========================= */
 
 .paper-figure {
-  width: 320px;
+  width: 280px;
 }
 
 .paper-figure a {
   display: block;
-
   width: 100%;
 }
 
@@ -306,13 +300,11 @@ a:hover {
 
 .authors {
   margin-bottom: 2px;
-
   color: #454545;
 }
 
 .venue {
   margin-bottom: 4px;
-
   color: #444444;
 }
 
@@ -330,144 +322,25 @@ a:hover {
 
 
 /* =========================
-   SELECTION
-========================= */
-
-::selection {
-  background-color: var(--light-color);
-  color: var(--text-color);
-}
-
-
-/* =========================
-   TABLET / MOBILE
+   TABLET
 ========================= */
 
 @media (max-width: 700px) {
 
-  body {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-  }
-
-  .container {
-    padding: 45px 22px 70px;
-  }
-
-
-  /* =========================
-     ABOUT
-  ========================= */
-
-  .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 28px;
-
-    margin-bottom: 50px;
-  }
-
-
-  /* =========================
-     PROFILE
-  ========================= */
-
-  .profile-column {
-    width: 200px;
-
-    align-items: center;
-  }
-
-  .profile-image {
-    width: 200px;
-    height: 200px;
-  }
-
-  .profile-links {
-    width: 200px;
-
-    margin-top: 18px;
-    gap: 18px;
-  }
-
-  .profile-links a {
-    font-size: 23px;
-  }
-
-
-  /* =========================
-     ABOUT CONTENT
-  ========================= */
-
-  .about-content {
-    width: 100%;
-  }
-
-  .about-content h1 {
-    margin: 0 0 22px;
-
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 1.1;
-
-    text-align: center;
-  }
-
-  .bio p {
-    margin-bottom: 18px;
-  }
-
-
-  /* =========================
-     SECTIONS
-  ========================= */
-
-  .section {
-    margin-top: 42px;
-  }
-
-  .section h2 {
-    font-size: 23px;
-    font-weight: 400;
-  }
-
-
-  /* =========================
-     NEWS
-  ========================= */
-
-  .news-item {
-    grid-template-columns: 90px minmax(0, 1fr);
-  }
-
-  .news-date {
-    font-size: 14px;
-  }
-
-
-  /* =========================
-     PUBLICATIONS
-  ========================= */
-
+  /* publication은 여전히 좌우 배치 */
   .publication {
-    display: block;
+    display: grid;
 
-    margin-bottom: 42px;
+    grid-template-columns: 240px minmax(0, 1fr);
+    column-gap: 14px;
+
+    align-items: center;
+
+    margin-bottom: 36px;
   }
 
   .paper-figure {
-    width: 100%;
-    max-width: 520px;
-
-    margin: 0 auto 18px;
-  }
-
-  .paper-figure img {
-    width: 100%;
-    height: auto;
+    width: 240px;
   }
 
   .paper-title {
@@ -486,71 +359,23 @@ a:hover {
 
 @media (max-width: 480px) {
 
-  .container {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-
-  /* =========================
-     PROFILE
-  ========================= */
-
-  .profile-column {
-    width: 180px;
-  }
-
-  .profile-image {
-    width: 180px;
-    height: 180px;
-  }
-
-  .profile-links {
-    width: 180px;
-
-    margin-top: 18px;
-    gap: 18px;
-  }
-
-  .profile-links a {
-    font-size: 22px;
-  }
-
-
-  /* =========================
-     NAME
-  ========================= */
-
-  .about-content h1 {
-    font-size: 30px;
-    font-weight: 400;
-  }
-
-
-  /* =========================
-     NEWS
-  ========================= */
-
-  .news-item {
-    display: block;
-  }
-
-  .news-date {
-    display: block;
-
-    margin-bottom: 2px;
-  }
-
-
-  /* =========================
-     PUBLICATIONS
-  ========================= */
-
+  /* 이 정도로 좁아졌을 때만 세로 배치 */
   .publication {
+    display: block;
+
     margin-bottom: 38px;
   }
 
   .paper-figure {
-    margin-bottom: 16px;
+    width: 100%;
+    max-width: 420px;
+
+    margin: 0 auto 16px;
   }
+
+  .paper-figure img {
+    width: 100%;
+    height: auto;
+  }
+}
 }
