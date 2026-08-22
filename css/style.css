@@ -40,6 +40,7 @@ body {
 a {
   color: var(--main-color);
   text-decoration: none;
+
   transition: color 0.15s ease;
 }
 
@@ -117,7 +118,10 @@ a:hover {
 
   width: 240px;
 
+  /* 아이콘끼리 간격 */
   gap: 18px;
+
+  /* 사진과 아이콘 사이 간격 */
   margin-top: 18px;
 }
 
@@ -235,6 +239,7 @@ a:hover {
   color: var(--main-color);
 }
 
+
 /* =========================
    PUBLICATIONS
 ========================= */
@@ -242,8 +247,11 @@ a:hover {
 .publication {
   display: grid;
 
-  grid-template-columns: 280px minmax(0, 1fr);
-  column-gap: 12px;
+  /* figure 영역 */
+  grid-template-columns: 260px minmax(0, 1fr);
+
+  /* figure와 텍스트 사이 간격 */
+  column-gap: 14px;
 
   align-items: center;
 
@@ -260,7 +268,13 @@ a:hover {
 ========================= */
 
 .paper-figure {
-  width: 280px;
+  width: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
 }
 
 .paper-figure a {
@@ -275,6 +289,11 @@ a:hover {
   height: auto;
 
   object-fit: contain;
+
+  /* 이미지 자체에 흰 여백이 있는 경우
+     figure를 살짝 확대해서 덜 작아 보이게 */
+  transform: scale(1.08);
+  transform-origin: center;
 
   border-radius: 6px;
 }
@@ -300,11 +319,13 @@ a:hover {
 
 .authors {
   margin-bottom: 2px;
+
   color: #454545;
 }
 
 .venue {
   margin-bottom: 4px;
+
   color: #444444;
 }
 
@@ -312,35 +333,166 @@ a:hover {
   font-size: 16px;
 }
 
-.paper-links a {
-  color: var(--main-color);
-}
 
-.paper-links a:hover {
-  color: #3F50B5;
+/* =========================
+   SELECTION
+========================= */
+
+::selection {
+  background-color: var(--light-color);
+  color: var(--text-color);
 }
 
 
 /* =========================
-   TABLET
+   TABLET / MOBILE
 ========================= */
 
 @media (max-width: 700px) {
 
-  /* publication은 여전히 좌우 배치 */
   .publication {
-    display: grid;
+    display: block;
 
-    grid-template-columns: 240px minmax(0, 1fr);
-    column-gap: 14px;
-
-    align-items: center;
-
-    margin-bottom: 36px;
+    margin-bottom: 40px;
   }
 
   .paper-figure {
-    width: 240px;
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0 auto 16px;
+
+    overflow: hidden;
+  }
+
+  .paper-figure img {
+    width: 100%;
+
+    transform: scale(1.04);
+  }
+
+  .paper-title {
+    font-size: 16px;
+  }
+
+  .paper-links {
+    font-size: 15px;
+  }
+}
+
+  /* =========================
+     ABOUT
+  ========================= */
+
+  .about {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-bottom: 50px;
+  }
+
+
+  /* =========================
+     PROFILE
+  ========================= */
+
+  .profile-column {
+    width: 200px;
+
+    align-items: center;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+
+  /* =========================
+     PROFILE LINKS
+  ========================= */
+
+  .profile-links {
+    width: 200px;
+
+    margin-top: 18px;
+    gap: 18px;
+  }
+
+  .profile-links a {
+    font-size: 23px;
+  }
+
+
+  /* =========================
+     ABOUT CONTENT
+  ========================= */
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-content h1 {
+    margin: 0 0 22px;
+
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.1;
+
+    text-align: center;
+  }
+
+  .bio p {
+    margin-bottom: 18px;
+  }
+
+
+  /* =========================
+     SECTIONS
+  ========================= */
+
+  .section {
+    margin-top: 42px;
+  }
+
+  .section h2 {
+    font-size: 23px;
+    font-weight: 400;
+  }
+
+
+  /* =========================
+     NEWS
+  ========================= */
+
+  .news-item {
+    grid-template-columns: 90px minmax(0, 1fr);
+  }
+
+  .news-date {
+    font-size: 14px;
+  }
+
+
+  /* =========================
+     PUBLICATIONS
+  ========================= */
+
+  .publication {
+    display: block;
+
+    margin-bottom: 42px;
+  }
+
+  .paper-figure {
+    width: 100%;
+    max-width: 520px;
+
+    margin: 0 auto 18px;
   }
 
   .paper-title {
@@ -359,23 +511,71 @@ a:hover {
 
 @media (max-width: 480px) {
 
-  /* 이 정도로 좁아졌을 때만 세로 배치 */
-  .publication {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+
+  /* =========================
+     PROFILE
+  ========================= */
+
+  .profile-column {
+    width: 180px;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-links {
+    width: 180px;
+
+    margin-top: 18px;
+    gap: 18px;
+  }
+
+  .profile-links a {
+    font-size: 22px;
+  }
+
+
+  /* =========================
+     NAME
+  ========================= */
+
+  .about-content h1 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+
+  /* =========================
+     NEWS
+  ========================= */
+
+  .news-item {
+    display: block;
+  }
+
+  .news-date {
     display: block;
 
+    margin-bottom: 2px;
+  }
+
+
+  /* =========================
+     PUBLICATIONS
+  ========================= */
+
+  .publication {
     margin-bottom: 38px;
   }
 
   .paper-figure {
-    width: 100%;
-    max-width: 420px;
-
-    margin: 0 auto 16px;
+    margin-bottom: 16px;
   }
-
-  .paper-figure img {
-    width: 100%;
-    height: auto;
-  }
-}
 }
