@@ -40,7 +40,6 @@ body {
 a {
   color: var(--main-color);
   text-decoration: none;
-
   transition: color 0.15s ease;
 }
 
@@ -70,7 +69,8 @@ a:hover {
 .about {
   display: grid;
 
-  grid-template-columns: 280px minmax(0, 1fr);
+  /* 240px로 통일 */
+  grid-template-columns: 240px minmax(0, 1fr);
   gap: 55px;
 
   align-items: start;
@@ -87,7 +87,7 @@ a:hover {
   display: flex;
   flex-direction: column;
 
-  width: 280px;
+  width: 240px;
 }
 
 
@@ -117,11 +117,12 @@ a:hover {
   justify-content: center;
   align-items: center;
 
-  width: 280px;
+  width: 240px;
 
+  /* 아이콘끼리 간격 */
   gap: 18px;
 
-  /* Always keep 18px between image and icons */
+  /* 사진 ↔ 아이콘 간격 */
   margin-top: 18px;
 }
 
@@ -162,7 +163,7 @@ a:hover {
   margin: 0 0 24px;
 
   font-size: 38px;
-  font-weight: 400 !important;
+  font-weight: 400;
   line-height: 1.05;
 
   color: var(--text-color);
@@ -252,9 +253,6 @@ a:hover {
   margin-bottom: 0;
 }
 
-
-/* Paper Title */
-
 .paper-title {
   margin-bottom: 2px;
 
@@ -265,26 +263,15 @@ a:hover {
   color: var(--text-color);
 }
 
-
-/* Authors */
-
 .authors {
   margin-bottom: 1px;
-
   color: #454545;
 }
 
-
-/* Venue */
-
 .venue {
   margin-bottom: 3px;
-
   color: #444444;
 }
-
-
-/* Paper Links */
 
 .paper-links {
   font-size: 16px;
@@ -300,7 +287,6 @@ a:hover {
 
 .paper-links span {
   margin: 0 5px;
-
   color: #A0A0A0;
 }
 
@@ -331,15 +317,9 @@ a:hover {
     padding: 45px 22px 70px;
   }
 
-
-  /* =========================
-     ABOUT
-  ========================= */
-
   .about {
     display: flex;
     flex-direction: column;
-
     align-items: center;
 
     gap: 28px;
@@ -348,34 +328,22 @@ a:hover {
   }
 
 
-  /* =========================
-     PROFILE
-  ========================= */
+  /* 200px로 통일 */
 
   .profile-column {
     width: 200px;
-
     align-items: center;
   }
 
   .profile-image {
     width: 200px;
     height: 200px;
-
-    border-radius: 30px;
   }
 
-
-  /* =========================
-     PROFILE LINKS
-  ========================= */
-
   .profile-links {
-    width: 190px;
+    width: 200px;
 
-    /* Keep exactly 18px on mobile too */
     margin-top: 18px;
-
     gap: 18px;
   }
 
@@ -384,9 +352,7 @@ a:hover {
   }
 
 
-  /* =========================
-     ABOUT CONTENT
-  ========================= */
+  /* About Content */
 
   .about-content {
     width: 100%;
@@ -396,7 +362,7 @@ a:hover {
     margin: 0 0 22px;
 
     font-size: 32px;
-    font-weight: 400 !important;
+    font-weight: 400;
     line-height: 1.1;
 
     text-align: center;
@@ -407,9 +373,7 @@ a:hover {
   }
 
 
-  /* =========================
-     SECTIONS
-  ========================= */
+  /* Sections */
 
   .section {
     margin-top: 42px;
@@ -421,9 +385,7 @@ a:hover {
   }
 
 
-  /* =========================
-     NEWS
-  ========================= */
+  /* News */
 
   .news-item {
     grid-template-columns: 90px minmax(0, 1fr);
@@ -434,9 +396,7 @@ a:hover {
   }
 
 
-  /* =========================
-     PUBLICATIONS
-  ========================= */
+  /* Publications */
 
   .paper-title {
     font-size: 16px;
@@ -460,9 +420,7 @@ a:hover {
   }
 
 
-  /* =========================
-     PROFILE
-  ========================= */
+  /* 180px로 통일 */
 
   .profile-column {
     width: 180px;
@@ -471,21 +429,12 @@ a:hover {
   .profile-image {
     width: 180px;
     height: 180px;
-
-    border-radius: 30px;
   }
 
-
-  /* =========================
-     PROFILE LINKS
-  ========================= */
-
   .profile-links {
-    width: 175px;
+    width: 180px;
 
-    /* Still exactly 18px */
     margin-top: 18px;
-
     gap: 18px;
   }
 
@@ -494,19 +443,15 @@ a:hover {
   }
 
 
-  /* =========================
-     NAME
-  ========================= */
+  /* Name */
 
   .about-content h1 {
     font-size: 30px;
-    font-weight: 400 !important;
+    font-weight: 400;
   }
 
 
-  /* =========================
-     NEWS
-  ========================= */
+  /* News */
 
   .news-item {
     display: block;
@@ -514,7 +459,6 @@ a:hover {
 
   .news-date {
     display: block;
-
     margin-bottom: 2px;
   }
 }
