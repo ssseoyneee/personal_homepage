@@ -376,7 +376,7 @@ a:hover {
     /* Keep exactly 18px on mobile too */
     margin-top: 18px;
 
-    gap: 20px;
+    gap: 18px;
   }
 
   .profile-links a {
