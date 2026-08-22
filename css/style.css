@@ -40,7 +40,6 @@ body {
 a {
   color: var(--main-color);
   text-decoration: none;
-
   transition: color 0.15s ease;
 }
 
@@ -118,10 +117,7 @@ a:hover {
 
   width: 240px;
 
-  /* 아이콘끼리 간격 */
   gap: 18px;
-
-  /* 사진과 아이콘 사이 간격 */
   margin-top: 18px;
 }
 
@@ -247,15 +243,16 @@ a:hover {
 .publication {
   display: grid;
 
-  /* figure 영역 */
-  grid-template-columns: 280px minmax(0, 1fr);
+  /* figure를 더 크게 */
+  grid-template-columns: 320px minmax(0, 1fr);
 
-  /* figure와 텍스트 사이 간격 */
-  column-gap: 10px;
+  /* figure와 text는 가깝게 */
+  column-gap: 14px;
 
+  /* figure와 오른쪽 정보 블록 세로 중앙 정렬 */
   align-items: center;
 
-  margin-bottom: 34px;
+  margin-bottom: 38px;
 }
 
 .publication:last-child {
@@ -268,17 +265,12 @@ a:hover {
 ========================= */
 
 .paper-figure {
-  width: 260px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
+  width: 320px;
 }
 
 .paper-figure a {
   display: block;
+
   width: 100%;
 }
 
@@ -289,11 +281,6 @@ a:hover {
   height: auto;
 
   object-fit: contain;
-
-  /* 이미지 자체에 흰 여백이 있는 경우
-     figure를 살짝 확대해서 덜 작아 보이게 */
-  transform: scale(1.08);
-  transform-origin: center;
 
   border-radius: 6px;
 }
@@ -333,6 +320,14 @@ a:hover {
   font-size: 16px;
 }
 
+.paper-links a {
+  color: var(--main-color);
+}
+
+.paper-links a:hover {
+  color: #3F50B5;
+}
+
 
 /* =========================
    SELECTION
@@ -350,35 +345,16 @@ a:hover {
 
 @media (max-width: 700px) {
 
-  .publication {
-    display: block;
-
-    margin-bottom: 40px;
-  }
-
-  .paper-figure {
-    width: 100%;
-    max-width: 500px;
-
-    margin: 0 auto 16px;
-
-    overflow: hidden;
-  }
-
-  .paper-figure img {
-    width: 100%;
-
-    transform: scale(1.04);
-  }
-
-  .paper-title {
+  body {
     font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
   }
 
-  .paper-links {
-    font-size: 15px;
+  .container {
+    padding: 45px 22px 70px;
   }
-}
+
 
   /* =========================
      ABOUT
@@ -387,7 +363,6 @@ a:hover {
   .about {
     display: flex;
     flex-direction: column;
-
     align-items: center;
 
     gap: 28px;
@@ -410,11 +385,6 @@ a:hover {
     width: 200px;
     height: 200px;
   }
-
-
-  /* =========================
-     PROFILE LINKS
-  ========================= */
 
   .profile-links {
     width: 200px;
@@ -493,6 +463,11 @@ a:hover {
     max-width: 520px;
 
     margin: 0 auto 18px;
+  }
+
+  .paper-figure img {
+    width: 100%;
+    height: auto;
   }
 
   .paper-title {
