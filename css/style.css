@@ -246,12 +246,16 @@ a:hover {
 
 .publication {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
 
-  gap: 28px;
-  align-items: start;
+  /* figure 영역 */
+  grid-template-columns: 260px minmax(0, 1fr);
 
-  margin-bottom: 38px;
+  /* figure와 텍스트 사이 간격 */
+  column-gap: 14px;
+
+  align-items: center;
+
+  margin-bottom: 34px;
 }
 
 .publication:last-child {
@@ -264,11 +268,18 @@ a:hover {
 ========================= */
 
 .paper-figure {
-  width: 240px;
+  width: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
 }
 
 .paper-figure a {
   display: block;
+  width: 100%;
 }
 
 .paper-figure img {
@@ -279,16 +290,12 @@ a:hover {
 
   object-fit: contain;
 
-  border-radius: 8px;
+  /* 이미지 자체에 흰 여백이 있는 경우
+     figure를 살짝 확대해서 덜 작아 보이게 */
+  transform: scale(1.08);
+  transform-origin: center;
 
-  transition:
-    transform 0.15s ease,
-    opacity 0.15s ease;
-}
-
-.paper-figure a:hover img {
-  transform: translateY(-2px);
-  opacity: 0.92;
+  border-radius: 6px;
 }
 
 
@@ -300,21 +307,15 @@ a:hover {
   min-width: 0;
 }
 
-
-/* Paper Title */
-
 .paper-title {
   margin-bottom: 5px;
 
   font-size: 17px;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.35;
 
   color: var(--text-color);
 }
-
-
-/* Authors */
 
 .authors {
   margin-bottom: 2px;
@@ -322,34 +323,14 @@ a:hover {
   color: #454545;
 }
 
-
-/* Venue */
-
 .venue {
   margin-bottom: 4px;
 
   color: #444444;
 }
 
-
-/* Paper Links */
-
 .paper-links {
   font-size: 16px;
-}
-
-.paper-links a {
-  color: var(--main-color);
-}
-
-.paper-links a:hover {
-  color: #3F50B5;
-}
-
-.paper-links span {
-  margin: 0 5px;
-
-  color: #A0A0A0;
 }
 
 
@@ -369,16 +350,35 @@ a:hover {
 
 @media (max-width: 700px) {
 
-  body {
+  .publication {
+    display: block;
+
+    margin-bottom: 40px;
+  }
+
+  .paper-figure {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0 auto 16px;
+
+    overflow: hidden;
+  }
+
+  .paper-figure img {
+    width: 100%;
+
+    transform: scale(1.04);
+  }
+
+  .paper-title {
     font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
   }
 
-  .container {
-    padding: 45px 22px 70px;
+  .paper-links {
+    font-size: 15px;
   }
-
+}
 
   /* =========================
      ABOUT
